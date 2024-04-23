@@ -29,4 +29,8 @@ jobs:
       # Automation using Any CLI
       - name: Print Account Information
         run: anypoint-cli-v4 account:user:describe --username ${{ secrets.ANYPOINT_USERNAME }} --password ${{ secrets.ANYPOINT_PASSWORD }}  -o json
-    
+
+      # Automation using Any CLI
+      - name: List All CH Apps
+        run: anypoint-cli-v4 runtime-mgr:cloudhub-application:list --organization 48ef632f-a26c-4a48-8ad8-adec48be0087 --environment dev --username ${{ secrets.ANYPOINT_USERNAME }} --password ${{ secrets.ANYPOINT_PASSWORD }}  -o json
+
